@@ -1,0 +1,75 @@
+@keyframes switch1 {
+  0% {
+    /* background-color: var(--primary-color); */
+    background-color: transparent;
+    transform: scale(1);
+  }
+
+  50% {
+    /* background-color: transparent; */
+    background-color: var(--primary-color);
+    transform: scale(1.2);
+  }
+
+  100% {
+    /* background-color: var(--primary-color); */
+    background-color: transparent;
+    transform: scale(1);
+  }
+}
+@keyframes switch2 {
+  0% {
+    background-color: var(--primary-color);
+    /* background-color: transparent; */
+    transform: scale(1.2);
+  }
+
+  50% {
+    background-color: transparent;
+    /* background-color: var(--primary-color); */
+    transform: scale(1);
+  }
+
+  100% {
+    background-color: var(--primary-color);
+    /* background-color: transparent; */
+    transform: scale(1.2);
+  }
+}
+
+.switch {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  min-height: 10rem;
+  background-color: rgb(255 255 255 / 85%);
+}
+
+.switch div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  border: 3px solid var(--primary-color);
+  border-radius: 50%;
+  /* animation: switch 1.25s infinite; */
+}
+
+.switch div:nth-of-type(1) {
+  background-color: var(--primary-color);
+  margin-left: -10px;
+  animation: switch1 1.25s infinite;
+  /* animation-delay: 0.25s; */
+}
+
+.switch div:nth-of-type(2) {
+  margin-left: 10px;
+  animation-delay: 0.625s;
+  animation: switch2 1.25s infinite;
+  /* animation-delay: 0.875s; */
+}
