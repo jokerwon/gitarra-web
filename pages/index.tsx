@@ -48,8 +48,8 @@ export default function Home() {
             Gitarra
           </span>
         </header>
-        <main className="px-40 py-10 font-mono">
-          <h3 className="ma p-10 lh-tight text-6xl text-dark-1 text-center">
+        <main className="px-5 py-10 lg:px-40 md:px-10 sm:px-5 font-mono">
+          <h3 className="ma p-10 lh-tight text-4xl lg:text-6xl lg:lh-tight sm:text-4xl sm:lh-tight text-dark-1 text-center">
             Search popular repositories
           </h3>
           <div className="mb-4 text-center">
@@ -92,7 +92,7 @@ export default function Home() {
                     </span>
                   </a>
                 </div>
-                <ul className="list-none grid grid-cols-4 gap-4">
+                <ul className="list-none grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                   {repos?.map(repo => {
                     return (
                       <a
